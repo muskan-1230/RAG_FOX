@@ -4,6 +4,8 @@ from pydantic import BaseModel
 from backend.ingest import ingest_document
 from backend.rag_engine import ask_document
 
+from fastapi.middleware.cors import CORSMiddleware
+
 import os
 import shutil
 import uuid
@@ -11,6 +13,17 @@ import uuid
 
 app = FastAPI()
 
+app.add_middleware(
+    CORSMiddleware,
+
+    allow_origins=["*"],
+
+    allow_credentials=True,
+
+    allow_methods=["*"],
+
+    allow_headers=["*"],
+)
 
 # =========================
 # Request Models

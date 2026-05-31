@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RAG FOX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>RAG FOX</h1>
+
+        <div class="upload-section">
+
+            <input type="file" id="pdfFile">
+
+            <button onclick="uploadPDF()">
+                Upload PDF
+            </button>
+
+        </div>
+
+        <div id="status"></div>
+
+        <hr>
+
+        <div class="chat-section">
+
+            <input
+                type="text"
+                id="question"
+                placeholder="Ask a question..."
+            >
+
+            <button onclick="askQuestion()">
+                Send
+            </button>
+
+        </div>
+
+        <div id="answer"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
