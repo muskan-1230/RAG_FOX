@@ -1,0 +1,13 @@
+venv/
+.env
+
+__pycache__/
+*.pyc
+
+.vscode/
+
+.vector_store_cache/
+
+.DS_Store
+
+*.log
